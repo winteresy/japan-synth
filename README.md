@@ -1,4 +1,4 @@
-# Static Site Boilerplate
+# Japan Synth
 
 ## How to start
 
