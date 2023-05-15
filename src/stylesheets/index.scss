@@ -1,0 +1,774 @@
+body {
+  background: var(--dark-grey);
+  font-family: Gudini;
+  color: var(--white);
+}
+
+#synth {
+  margin: auto;
+
+  .Container {
+    .StartWindow {
+      .Text {
+        position: relative;
+        margin: auto;
+      }
+      & > .SC_Button {
+        position: absolute;
+        left: 18%;
+        top: 30%;
+        width: 949px;
+        height: 346px;
+        background: var(--orange-red);
+        padding-top: 90px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 227px;
+        line-height: 96%;
+        user-select: none;
+        cursor: pointer;
+      }
+      .Rectangle1 {
+        position: absolute;
+        width: 39px;
+        height: 41px;
+        left: 127px;
+        top: -3px;
+        background: var(--orange-red);
+      }
+      .Rectangle2 {
+        position: absolute;
+        width: 65px;
+        height: 69px;
+        left: 181px;
+        top: 688px;
+        background: var(--orange-red);
+      }
+      .Rectangle3 {
+        position: absolute;
+        width: 39px;
+        height: 41px;
+        left: 911px;
+        top: 151px;
+        background: var(--orange-red);
+      }
+      .Rectangle4 {
+        position: absolute;
+        width: 39px;
+        height: 41px;
+        left: 1339px;
+        top: 545px;
+        background: var(--orange-red);
+      }
+      .Rectangle5 {
+        position: absolute;
+        width: 65px;
+        height: 146px;
+        left: 62px;
+        top: 38px;
+        background: var(--lilac);
+      }
+      .Rectangle6 {
+        background: var(--lilac);
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: 55px;
+        top: 587px;
+      }
+      .Rectangle7 {
+        background: var(--lilac);
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: 503px;
+        top: 248px;
+      }
+      .Rectangle8 {
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: 543px;
+        top: 206px;
+
+        background: var(--lilac);
+      }
+      .Rectangle9 {
+        position: absolute;
+        width: 40px;
+        height: 42px;
+        left: 1229px;
+        top: 805px;
+        background: var(--lilac);
+      }
+      .Rectangle10 {
+        position: absolute;
+        width: 65px;
+        height: 50px;
+        left: 1294px;
+        top: 156px;
+        background: var(--khaki);
+      }
+      .Rectangle11 {
+        position: absolute;
+        width: 65px;
+        height: 50px;
+        left: 1229px;
+        top: 206px;
+        background: var(--khaki);
+      }
+      .Rectangle12 {
+        position: absolute;
+        width: 65px;
+        height: 50px;
+        left: 1294px;
+        top: 256px;
+        background: var(--khaki);
+      }
+    }
+    .ContainerUI {
+      .ContainerWithDog {
+        position: fixed;
+        width: 47.9%;
+        height: 94vh;
+        top: 20px;
+        left: 20px;
+        border: 1px solid var(--white);
+        border-radius: 40px;
+        overflow: hidden;
+        background: url("images/yuki.gif") no-repeat center center;
+        background-size: cover;
+      }
+      .toggleUIButton {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding-top: 45px;
+        border-radius: 40px;
+        width: 47.9%;
+        height: 129px;
+        font-size: 48px;
+        line-height: 96.02%;
+        text-align: center;
+        color: var(--dark-grey);
+        background-color: var(--white);
+      }
+    }
+    .instrumentUI {
+      .SynthContainer {
+        position: absolute;
+        top: 169px;
+        right: 20px;
+        width: 47.9%;
+
+        .SynthContainerFlex {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+
+          h3 {
+            color: var(--white);
+            font-size: 32px;
+            line-height: 96.02%;
+            text-align: center;
+            letter-spacing: -0.04em;
+            margin: auto;
+            margin-top: 22px;
+          }
+
+          .SC_Slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 60px;
+
+            h3 {
+              font-size: 16px;
+              line-height: 96.02%;
+              text-align: center;
+              letter-spacing: -0.04em;
+              color: var(--white);
+            }
+
+            input[type='range'] {
+              -webkit-appearance: none;
+              width: 150px;
+
+              &::-webkit-slider-runnable-track {
+                height: 5px;
+                background: var(--white);
+                border: none;
+              }
+
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                border: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background: var(--white);
+                margin-top: -6px;
+                cursor: pointer;
+              }
+
+              &:focus {
+                outline: none;
+
+                &::-webkit-slider-runnable-track {
+                  background: var(--orange-red);
+                }
+              }
+            }
+          }
+
+          .SC_Knob {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            .wrapper {
+              position: relative;
+              width: 180px;
+              height: 180px;
+              margin-bottom: 14px;
+              user-select: none;
+              h3 {
+                text-align: center;
+                text-transform: uppercase;
+                color: var(--white);
+              }
+            }
+
+            .body {
+              position: absolute;
+              left: 60px;
+              top: 86px;
+
+              div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background: var(--white);
+                border-radius: 50px;
+                z-index: 1;
+
+                &:hover {
+                  filter: brightness(90%);
+                  cursor: pointer;
+                }
+
+                &::before {
+                  position: absolute;
+                  top: 0;
+                  left: 28px;
+                  display: block;
+                  content: '';
+                  width: 4px;
+                  height: 20px;
+                  background: var(--orange-red);
+                }
+              }
+            }
+
+            .value {
+              position: absolute;
+              top: 55px;
+              width: 100%;
+              text-align: center;
+              font-size: 12px;
+              display: flex;
+              width: 22px;
+              height: 13px;
+              font-size: 10px;
+              font-weight: 400;
+              color: var(--white);
+            }
+
+            .bullet {
+              width: 4px;
+              height: 9px;
+              background-color: var(--white);
+            }
+
+            .group {
+              position: absolute;
+              height: 93px;
+              width: 4px;
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+            }
+
+            #group1 {
+              transform: rotate(90deg);
+              left: 88px;
+              top: 70px;
+            }
+
+            #group2 {
+              transform: rotate(45deg);
+              left: 89px;
+              top: 70px;
+            }
+
+            #group3 {
+              top: 70px;
+              left: 87px;
+              transform: rotate(-45deg);
+            }
+
+            .lastBullet {
+              width: 4px;
+              height: 9px;
+              left: 88px;
+              top: 70px;
+              background-color: var(--white);
+              position: absolute;
+            }
+
+            .name {
+              position: absolute;
+              top: 14px;
+              left: 15px;
+              width: 150px;
+              height: 20px;
+              font-size: 16px;
+              font-weight: 400;
+              text-align: center;
+            }
+
+            #value7 {
+              top: 148px;
+              left: 31px;
+
+              align-items: center;
+              flex-direction: row;
+              justify-content: flex-end;
+              text-align: right;
+            }
+
+            #value9 {
+              top: 109px;
+              left: 15px;
+
+              align-items: center;
+              flex-direction: row;
+              justify-content: flex-end;
+              text-align: right;
+            }
+
+            #value11 {
+              top: 71px;
+              left: 31px;
+
+              align-items: center;
+              flex-direction: row;
+              justify-content: flex-end;
+              text-align: right;
+            }
+
+            #value12 {
+              top: 55px;
+              left: 79px;
+
+              text-align: center;
+              justify-content: center;
+              align-items: center;
+            }
+
+            #value2 {
+              top: 71px;
+              right: 31px;
+
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: flex-start;
+              text-align: left;
+            }
+
+            #value3 {
+              top: 109px;
+              right: 15px;
+
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: flex-start;
+              text-align: left;
+            }
+
+            #value5 {
+              top: 148px;
+              right: 31px;
+
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: flex-start;
+              text-align: left;
+            }
+          }
+          .SC_ToggleButton {
+            width: 119px;
+            height: 40px;
+            padding-top: 14px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 96.02%;
+            text-align: center;
+            background-color: var(--white);
+            color: var(--dark-grey);
+            user-select: none;
+            cursor: pointer;
+
+            &:hover:not(.active) {
+              background-color: var(--lilac);
+            }
+
+            &.active {
+              color: var(--white);
+              background-color: var(--orange-red);
+              cursor: default;
+            }
+          }
+
+          .ChannelContainer {
+            width: 100%;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            height: 250px;
+
+            .ToneSynth {
+              margin-top: 20px;
+              width: 500px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: auto;
+
+              h3 {
+                font-size: 16px;
+              }
+
+              .KotoVolume {
+                width: 280px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-content: center;
+                .SC_ToggleButton {
+                  margin-top: 35px;
+                }
+              }
+            }
+          }
+          .SampleAndBPMContainer {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            .BPMContainer {
+              width: 30%;
+              border: 1px solid var(--white);
+              border-radius: 40px;
+              height: 160px;
+            }
+            .SC_Button {
+              width: 30%;
+              border-radius: 40px;
+              height: 160px;
+              font-size: 32px;
+              line-height: 96.02%;
+              padding-top: 68px;
+              text-align: center;
+              color: var(--dark-grey);
+              background-color: var(--white);
+              cursor: pointer;
+              user-select: none;
+            }
+            .SC_Button:nth-of-type(2):hover {
+              color: var(--white);
+              background-color: var(--lilac);
+            }
+            .SC_Button:nth-of-type(3):hover {
+              color: var(--white);
+              background-color: var(--khaki);
+            }
+          }
+          .ToneSynth {
+            margin-top: 20px;
+            width: 100%;
+
+            .ToneSynthContainer {
+              width: 100%;
+              border: 1px solid var(--white);
+              border-radius: 40px;
+              height: 130px;
+              .SC_ToggleButtonSet {
+                margin-top: 0;
+                div {
+                  margin-top: 6px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                }
+              }
+            }
+            .EnvelopeContainer {
+              .SC_ToggleButton {
+                margin-top: 20px;
+                width: 100%;
+                height: 68px;
+                background: var(--white);
+                border-radius: 40px;
+                color: var(--dark-grey);
+                font-size: 32px;
+                text-align: center;
+                padding-top: 22px;
+
+                &:hover:not(.active) {
+                  color: var(--white);
+                  background-color: var(--orange-red);
+                }
+
+                &.active {
+                  color: var(--white);
+                  background-color: var(--orange-red);
+                  cursor: default;
+                }
+              }
+            }
+            .EnvelopeShowContainer {
+              width: 100%;
+              height: 140px;
+              margin-top: 20px;
+              border: 1px solid var(--white);
+              border-radius: 40px;
+              display: flex;
+              justify-content: center;
+
+              .EnvelopeShowContainerFlex {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+              }
+            }
+          }
+          .SequenceContainer {
+            width: 100%;
+            height: 129px;
+            margin-top: 20px;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+
+            .ButtonSet {
+              display: flex;
+              width: 292px;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: auto;
+              margin-top: 6px;
+            }
+          }
+          .SoundContainer {
+            width: 100%;
+            height: 129px;
+            margin-top: 20px;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+
+            .ButtonSet {
+              display: flex;
+              width: 466px;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: auto;
+              margin-top: 6px;
+            }
+          }
+          .Select {
+            margin-top: 20px;
+            width: 100%;
+            font-size: 32px;
+            text-align: center;
+            background-color: var(--white);
+            color: var(--dark-grey);
+            height: 68px;
+            cursor: pointer;
+            line-height: 96.02%;
+            border-radius: 40px;
+
+            &:hover {
+              background: var(--orange-red);
+            }
+
+            .currentValue {
+              padding: 22px;
+              line-height: 30px;
+            }
+
+            .options {
+              position: absolute;
+              width: 100%;
+              border-radius: 40px;
+
+              .SelectItem {
+                padding: 10px 20px;
+                line-height: 96.02%;
+                background: var(--white);
+
+                &:hover {
+                  background: var(--lilac);
+                }
+
+                &.active {
+                  background: var(--orange-red);
+                }
+              }
+            }
+          }
+          .OffRandomContainer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .SC_ToggleButton {
+              width: 48%;
+              height: 68px;
+              font-size: 32px;
+              line-height: 96.02%;
+              text-align: center;
+              letter-spacing: -0.04em;
+              border-radius: 40px;
+              padding-top: 22px;
+            }
+          }
+          .ChorusEffect {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            .ChorusTitle {
+              margin-bottom: 0;
+            }
+            .ChorusSlider {
+              width: 495px;
+              margin: auto;
+              margin-top: 10px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            }
+            .ButtonSet {
+              display: flex;
+              width: 616px;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: auto;
+              margin-bottom: 30px;
+            }
+          }
+          .DistortionEffect {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            .DistortionTitle {
+              margin-bottom: 0;
+            }
+            .DistortionSlider {
+              width: 320px;
+              margin: auto;
+              margin-top: 10px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            }
+            .OversampleContainer {
+              .ButtonSetTitle {
+                font-size: 16px;
+                line-height: 96.02%;
+                margin-bottom: 22px;
+                margin-top: 0;
+              }
+              .ButtonSet {
+                display: flex;
+                width: 464px;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: auto;
+                margin-bottom: 30px;
+              }
+            }
+          }
+          .BitCrusherEffect {
+            width: 100%;
+            height: 162px;
+            margin-top: 20px;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            .BitCrusherEffectTitle {
+              margin-bottom: 0;
+            }
+
+            .BitCrusherSlider {
+              width: 320px;
+              margin: auto;
+              margin-top: 10px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            }
+          }
+          .PingPongDelayEffect {
+            width: 100%;
+            height: 162px;
+            margin: 20px 0 27px 0;
+            border: 1px solid var(--white);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            .PingPongDelayEffectTitle {
+              margin-bottom: 0;
+            }
+            .PingPongDelaySlider {
+              width: 483px;
+              margin: auto;
+              margin-top: 10px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            }
+          }
+        }
+      }
+    }
+  }
+}
