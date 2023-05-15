@@ -160,7 +160,7 @@ export default class Container extends Component {
         B1: 'spanish-guitar-koto-arp-loop_234bpm_F_minor.wav',
         B2: 'kioto.mp3'
       },
-      baseUrl: '/samples/'
+      baseUrl: '/japan-synth/samples/'
     })
 
     samplerChannel = new Tone.Channel(kotoSettings.channel).toDestination()

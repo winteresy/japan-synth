@@ -32755,7 +32755,7 @@ var Container = /*#__PURE__*/function (_Component) {
           B1: 'spanish-guitar-koto-arp-loop_234bpm_F_minor.wav',
           B2: 'kioto.mp3'
         },
-        baseUrl: '/samples/'
+        baseUrl: '/japan-synth/samples/'
       });
       samplerChannel = new Channel(kotoSettings.channel).toDestination();
       sampler.chain(samplerChannel);
